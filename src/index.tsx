@@ -22,12 +22,12 @@ apiRoutes
     info: { ...configGeneral, version: 'v1' },
   })
   .get(configDocs.swagger, honoSwaggerUI({ url: '/openapi.json' }))
-  .get('/welcome', (c) => c.text('Welcome to Amazing Safari API!'))
+  .get('/welcome', (c) => c.text('Welcome to HiKa API!'))
   .onError((err, c) => {
     return c.json({ code: 500, status: 'error', message: err.message }, 500);
   });
 
-console.info(`🐾 Amazing Safari Backend API 💽 DATABASE_URL: `);
+console.info(`🌸 HiKa Backend API 💽 DATABASE_URL: `);
 
 export default app;
 
